@@ -1,0 +1,33 @@
+\documentclass[12pt]{article}
+\newcommand{\tab}[0]{\indent \indent}
+\newcommand{\enter}[0]{\\ \tab}
+\newcommand{\nextline}[0]{\\ \enter}
+\newcommand{\codeindent}[0]{\\ \enter \indent}
+\usepackage[margin=1.0in]{geometry}
+\title{\vspace{-2.0cm} Lab 2}
+\author{Omar Raza}
+\date{Due: 6/28/2016}
+\setlength{\footskip}{30pt} % maybe this will work
+\begin{document}
+\maketitle
+\noindent
+\textbf{Problem 1}: \nextline a) When dealing with variables and variable decelerations, it is always the matter \tab of two things, if you are using the variables content, or the variables address in \tab memory. Therefore, when using the \textbf{stdio.h} function, "scanf", programmers have to \tab be equally cautious because of the easiness to make a mistake. We can look at two \tab pieces of code, and describe how one is correct, and one is wrong. The first function, \codeindent  scanf("\%d",s); \nextline is using the stdio.h function, "scanf", to input a value and place it as the \textbf{address} of \enter variable s. After doing that, scanf will then try to place the value, and will fail causing \tab in a segmentation fault, which I will discuss in 1.b. The next and proper line of code is: \codeindent scanf("\%d",\&s);\\ \enter It is using the stdio.h function, "scanf", to input a value and point it to the spot \tab in memory where "s" is stored, and store it. \\\\
+\tab b) A segmentation fault is thrown by the gcc when a program tries to access a \enter restricted or non-existent place in memory. \\ \\
+\textbf{Problem 2}: \nextline a) All I did in main.c of v1 was change all the occurrences of s to the int pointer \tab *u, that we were told to create. This works because of pointers, where instead of \tab using the variable itself, I pointed to the location of it in memory. \\\\ 
+\textbf{Problem 3}: \nextline Available in the v2 directory of the lab2 folder \\\\
+\textbf{Problem 4}: \nextline a) If v8 is left alone as is and compiled, then it will result in a segmentation fault \tab because the place in memory 'h' is accessible, but the places in memory 'h+1' and \tab 'h+2' either do not exist or are illegal to access. \nextline
+	b) Debugged in v6 of lab2 \nextline
+	c) The fundamental difference between module v7 and v8 is the declaration and \tab input of the values, v7 relies on array inputing \codeindent h[1] = 4; \nextline  While v8 uses pointers to place values in the array \codeindent *(h+1) = 200; \nextline 
+	d) The way to fix v8 is to declare an array of length 3 so that it is able to \enter accommodate all the declaration: \codeindent int h[3]; \\\\
+\textbf{Problem 5}: \nextline a) A silent run-time error is an error that doesn't occur in syntax or usage, some- \enter thing that would be caught during compile time, but the logic of the program itself, \tab that is manifested only during run-time. The silent run-time error has to deal with \tab the for loop statements. If you change the 6 to a 7 in the loop parameters, it throws \tab a very small number because of the undefined nature of the 7th part of the array.  \\\\   	 
+\tab b)One way to not have any errors of decrease the risk of errors is to make \enter  compound for-loop statements that wont need to be redeclared every time one wants \tab to do something else with the array. \\\\
+\textbf{Problem 6}: \nextline Available in the v10 directory of the lab2 folder \\\\	
+\textbf{Bonus Problem}: \nextline a) The program will crash. \\ \enter b) Because when inputing a string longer than the character array, it tries to \enter access spaces in memory that aren't available. So the program crashes and aborts.
+	
+	
+	
+	
+	
+	
+	
+\end{document}

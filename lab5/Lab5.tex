@@ -1,0 +1,18 @@
+\documentclass[12pt]{article}
+\newcommand{\tab}[0]{\indent \indent}
+\newcommand{\enter}[0]{\\ \tab}
+\newcommand{\nextline}[0]{\\ \enter}
+\newcommand{\codeindent}[0]{\\ \enter \indent}
+\usepackage[margin=1.0in]{geometry}
+\title{\vspace{-2.0cm} Lab 2}
+\author{Omar Raza}
+\date{Due: 6/28/2016}
+\setlength{\footskip}{30pt} % maybe this will work
+\begin{document}
+\maketitle
+\noindent
+\textbf{Problem 1}: \nextline Available in the v1 directory of the lab5 folder \\\\
+\textbf{Problem 2}: \nextline Available in the v2 directory of the lab5 folder \\\\
+\textbf{Problem 3}: \nextline a) When running selfdestructsh, if the user inputs the dprompt command, the dprompt \tab command is executed and waits for the next command. \nextline b) When the binary: \codeindent /bin/ls \nextline is executed it will parse through the code until it arrives at the else that has the \tab processing \textit{execl()} in it. It will then be executed through the \textit{execl()} function. The \tab significance of the \textit{execl()} function is that if executed, it will override all existing \enter procedures and if an error has occured, will return -1 and then exit the process, else, \tab it will go away. \\\\
+\textbf{Problem 4}: \nextline a) When running gsh, like before, if the user inputs the dprompt command, the \tab dprompt command is executed and waits for the next command. \nextline b) The \textit{execlp()} function will be the exact same as the previous, just that it doesn't  \tab need to take the pathname to run the command.\\\\
+\end{document}
